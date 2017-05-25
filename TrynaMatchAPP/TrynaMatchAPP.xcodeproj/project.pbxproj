@@ -12,9 +12,13 @@
 		A8E099B51ED74565007D67A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B31ED74565007D67A2 /* Main.storyboard */; };
 		A8E099B71ED74566007D67A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B61ED74566007D67A2 /* Assets.xcassets */; };
 		A8E099BA1ED74566007D67A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B81ED74566007D67A2 /* LaunchScreen.storyboard */; };
+		D6C512A8D0776FF449360D46 /* Pods_TrynaMatchAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A3796541924B7CC86F2E9F /* Pods-TrynaMatchAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrynaMatchAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrynaMatchAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP.release.xcconfig"; sourceTree = "<group>"; };
+		7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrynaMatchAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E099AC1ED74564007D67A2 /* TrynaMatchAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrynaMatchAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E099AF1ED74565007D67A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E099B11ED74565007D67A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C512A8D0776FF449360D46 /* Pods_TrynaMatchAPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3FFD28398EF36880A95200 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00A3796541924B7CC86F2E9F /* Pods-TrynaMatchAPP.debug.xcconfig */,
+				1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9AF2065BD311EE5648CD7642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8E099A31ED74563007D67A2 = {
 			isa = PBXGroup;
 			children = (
 				A8E099AE1ED74564007D67A2 /* TrynaMatchAPP */,
 				A8E099AD1ED74564007D67A2 /* Products */,
+				1F3FFD28398EF36880A95200 /* Pods */,
+				9AF2065BD311EE5648CD7642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8E099BE1ED74566007D67A2 /* Build configuration list for PBXNativeTarget "TrynaMatchAPP" */;
 			buildPhases = (
+				ABDC4CBB9DD7B0D9F908099B /* [CP] Check Pods Manifest.lock */,
 				A8E099A81ED74564007D67A2 /* Sources */,
 				A8E099A91ED74564007D67A2 /* Frameworks */,
 				A8E099AA1ED74564007D67A2 /* Resources */,
+				41C6B141CF6CEE5151BB739D /* [CP] Embed Pods Frameworks */,
+				1B2C801A04931D9CE8A45CB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2C801A04931D9CE8A45CB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41C6B141CF6CEE5151BB739D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABDC4CBB9DD7B0D9F908099B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8E099A81ED74564007D67A2 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		A8E099BF1ED74566007D67A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A3796541924B7CC86F2E9F /* Pods-TrynaMatchAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrynaMatchAPP/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		A8E099C01ED74566007D67A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrynaMatchAPP/Info.plist;
