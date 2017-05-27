@@ -19,6 +19,7 @@
 		00A3796541924B7CC86F2E9F /* Pods-TrynaMatchAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrynaMatchAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrynaMatchAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP.release.xcconfig"; sourceTree = "<group>"; };
 		7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrynaMatchAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A85637361ED9F0DE0082F32F /* TrynaMatchAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrynaMatchAPP.entitlements; sourceTree = "<group>"; };
 		A8E099AC1ED74564007D67A2 /* TrynaMatchAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrynaMatchAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E099AF1ED74565007D67A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E099B11ED74565007D67A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		A8E099AE1ED74564007D67A2 /* TrynaMatchAPP */ = {
 			isa = PBXGroup;
 			children = (
+				A85637361ED9F0DE0082F32F /* TrynaMatchAPP.entitlements */,
 				A8E099AF1ED74565007D67A2 /* AppDelegate.swift */,
 				A8E099B11ED74565007D67A2 /* ViewController.swift */,
 				A8E099B31ED74565007D67A2 /* Main.storyboard */,
@@ -123,7 +125,13 @@
 				TargetAttributes = {
 					A8E099AB1ED74564007D67A2 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = APFUQ23TWA;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -336,6 +344,8 @@
 			baseConfigurationReference = 00A3796541924B7CC86F2E9F /* Pods-TrynaMatchAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrynaMatchAPP/TrynaMatchAPP.entitlements;
+				DEVELOPMENT_TEAM = APFUQ23TWA;
 				INFOPLIST_FILE = TrynaMatchAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kghumaan.TrynaMatchAPP;
@@ -349,6 +359,8 @@
 			baseConfigurationReference = 1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TrynaMatchAPP/TrynaMatchAPP.entitlements;
+				DEVELOPMENT_TEAM = APFUQ23TWA;
 				INFOPLIST_FILE = TrynaMatchAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kghumaan.TrynaMatchAPP;
@@ -376,6 +388,7 @@
 				A8E099C01ED74566007D67A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
