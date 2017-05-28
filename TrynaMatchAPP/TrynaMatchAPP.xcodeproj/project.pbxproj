@@ -12,6 +12,7 @@
 		A8E099B51ED74565007D67A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B31ED74565007D67A2 /* Main.storyboard */; };
 		A8E099B71ED74566007D67A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B61ED74566007D67A2 /* Assets.xcassets */; };
 		A8E099BA1ED74566007D67A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B81ED74566007D67A2 /* LaunchScreen.storyboard */; };
+		A8FAAB2B1EDB5F0E00B02517 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = A8FAAB2A1EDB5F0E00B02517 /* GoogleService-Info (1).plist */; };
 		D6C512A8D0776FF449360D46 /* Pods_TrynaMatchAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		A8E099B61ED74566007D67A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8E099B91ED74566007D67A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8E099BB1ED74566007D67A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8FAAB2A1EDB5F0E00B02517 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A8E099B61ED74566007D67A2 /* Assets.xcassets */,
 				A8E099B81ED74566007D67A2 /* LaunchScreen.storyboard */,
 				A8E099BB1ED74566007D67A2 /* Info.plist */,
+				A8FAAB2A1EDB5F0E00B02517 /* GoogleService-Info (1).plist */,
 			);
 			path = TrynaMatchAPP;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				A8E099BA1ED74566007D67A2 /* LaunchScreen.storyboard in Resources */,
 				A8E099B71ED74566007D67A2 /* Assets.xcassets in Resources */,
 				A8E099B51ED74565007D67A2 /* Main.storyboard in Resources */,
+				A8FAAB2B1EDB5F0E00B02517 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
