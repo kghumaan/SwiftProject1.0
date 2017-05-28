@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75BB61ACAA4A5F5D691208753807FDA5"
+               BlueprintIdentifier = "FD935CD8BEF2B132943B0BDD9ACE117D"
                BuildableName = "Pods_TrynaMatchAPP.framework"
                BlueprintName = "Pods-TrynaMatchAPP"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75BB61ACAA4A5F5D691208753807FDA5"
+            BlueprintIdentifier = "FD935CD8BEF2B132943B0BDD9ACE117D"
             BuildableName = "Pods_TrynaMatchAPP.framework"
             BlueprintName = "Pods-TrynaMatchAPP"
             ReferencedContainer = "container:Pods.xcodeproj">
