@@ -22,7 +22,19 @@ class LoginController: UIViewController {
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
+        button.setTitle("Register", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        // this next step is needed or else the constraints set later on will not work
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    let nameTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Name"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
     }()
     
     override func viewDidLoad() {
@@ -31,18 +43,35 @@ class LoginController: UIViewController {
         view.backgroundColor = UIColor(r: 61, g: 91, b: 151)
         
         view.addSubview(inputsContainerView)
+        view.addSubview(loginRegisterButton)
         
         setUpInputsContainers()
+        setUpLoginRegistrationButton()
         
     }
     
     func setUpInputsContainers() {
-        // need x, y, width, height constraints....
+        // need x, y, width, height constraints
         
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
         inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        
+        inputsContainerView.addSubview(nameTextField)
+        
+        // need x, y, width, height constraints
+        
+        nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12)
+        nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor)
+        nameTextField.widthAnchor.constraint(equalToConstant: <#T##CGFloat#>)
+    }
+    
+    func setUpLoginRegistrationButton(){
+        loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive = true
+        loginRegisterButton.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     override func preferredStatusBarStyle() -> UIStatusBarStyle{
         return .lightContent
