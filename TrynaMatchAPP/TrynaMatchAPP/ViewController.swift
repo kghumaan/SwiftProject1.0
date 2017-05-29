@@ -10,14 +10,44 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
+import MapKit
+import CoreLocation
+import Foundation
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
 
+class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, CLLocationManagerDelegate {
+
+    @IBOutlet weak var map: MKMapView!
+    var locationManager: CLLocationManager!
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpFacebookButton()
         setUpGoogleButton()
+        
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+
+        // MAP
+        
+        let Map = CLLocationCoordinate2DMake(<#T##latitude: CLLocationDegrees##CLLocationDegrees#>, <#T##longitude: CLLocationDegrees##CLLocationDegrees#>)
+    }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        
+        let location = locations.last! as CLLocation
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.map.setRegion(region, animated: true)
     }
     
     fileprivate func setUpFacebookButton() {
