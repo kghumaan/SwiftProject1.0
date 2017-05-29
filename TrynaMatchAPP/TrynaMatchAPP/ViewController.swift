@@ -30,7 +30,7 @@ class ViewController: UITableViewController, FBSDKLoginButtonDelegate, GIDSignIn
     func handleLogout(){
         
         let loginController = LoginController()
-        presentViewController(loginController, animated: true, completion: nil)
+        present(loginController, animated: true, completion: nil)
         
     }
     
