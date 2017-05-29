@@ -15,39 +15,23 @@ import CoreLocation
 import Foundation
 
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, CLLocationManagerDelegate {
-
-    @IBOutlet weak var map: MKMapView!
-    var locationManager: CLLocationManager!
-    var locationManager = CLLocationManager()
+class ViewController: UITableViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
         setUpFacebookButton()
         setUpGoogleButton()
         
-        if (CLLocationManager.locationServicesEnabled())
-        {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
-        }
-
-        // MAP
-        
-        let Map = CLLocationCoordinate2DMake(<#T##latitude: CLLocationDegrees##CLLocationDegrees#>, <#T##longitude: CLLocationDegrees##CLLocationDegrees#>)
     }
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-    {
+    
+    func handleLogout(){
         
-        let location = locations.last! as CLLocation
+        let loginController = LoginController()
+        presentViewController(loginController, animated: true, completion: nil)
         
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        
-        self.map.setRegion(region, animated: true)
     }
     
     fileprivate func setUpFacebookButton() {

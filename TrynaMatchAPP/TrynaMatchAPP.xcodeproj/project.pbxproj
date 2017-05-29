@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8B8453A1EDC97B300BF0B5A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B845391EDC97B300BF0B5A /* LoginController.swift */; };
 		A8E099B01ED74565007D67A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E099AF1ED74565007D67A2 /* AppDelegate.swift */; };
 		A8E099B21ED74565007D67A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E099B11ED74565007D67A2 /* ViewController.swift */; };
 		A8E099B51ED74565007D67A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8E099B31ED74565007D67A2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		1652FC4C4A83D34719FFBC09 /* Pods-TrynaMatchAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrynaMatchAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrynaMatchAPP/Pods-TrynaMatchAPP.release.xcconfig"; sourceTree = "<group>"; };
 		7ABFA52E3A1FE6D9816C7D5F /* Pods_TrynaMatchAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrynaMatchAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85637361ED9F0DE0082F32F /* TrynaMatchAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrynaMatchAPP.entitlements; sourceTree = "<group>"; };
+		A8B845391EDC97B300BF0B5A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A8E099AC1ED74564007D67A2 /* TrynaMatchAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrynaMatchAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E099AF1ED74565007D67A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8E099B11ED74565007D67A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A8B845381EDC978800BF0B5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8B845391EDC97B300BF0B5A /* LoginController.swift */,
+				A8E099B11ED74565007D67A2 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		A8E099A31ED74563007D67A2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +92,9 @@
 		A8E099AE1ED74564007D67A2 /* TrynaMatchAPP */ = {
 			isa = PBXGroup;
 			children = (
+				A8B845381EDC978800BF0B5A /* Controller */,
 				A85637361ED9F0DE0082F32F /* TrynaMatchAPP.entitlements */,
 				A8E099AF1ED74565007D67A2 /* AppDelegate.swift */,
-				A8E099B11ED74565007D67A2 /* ViewController.swift */,
 				A8E099B31ED74565007D67A2 /* Main.storyboard */,
 				A8E099B61ED74566007D67A2 /* Assets.xcassets */,
 				A8E099B81ED74566007D67A2 /* LaunchScreen.storyboard */,
@@ -224,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E099B21ED74565007D67A2 /* ViewController.swift in Sources */,
+				A8B8453A1EDC97B300BF0B5A /* LoginController.swift in Sources */,
 				A8E099B01ED74565007D67A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
