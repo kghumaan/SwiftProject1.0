@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class LoginController: UIViewController {
 
@@ -27,26 +28,38 @@ class LoginController: UIViewController {
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
-        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleRegisterClick), for: .touchUpInside)
         
         // this next step is needed or else the constraints set later on will not work
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    func handleRegister(){
-        guard let email = emailTextField.text, let password = passwordTextField.text else{
-            print("Form is not valid.")
+    func handleRegisterClick(){
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else{
+            print("Form is not valid...")
             return
         }
         
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (currentUser, error) in
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
             if error != nil{
-                print(error)
+                print(error ?? "user was not created... something went wrong")
                 return
             }
-            
             // else... succesfully authernticated user
+            
+            var ref: FIRDatabaseReference!
+            ref = FIRDatabase.database().reference()
+            
+            let values = ["name": name, "email": email]
+        
+            ref.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                if err != nil{
+                    print(err ?? "Child values could not be updated... something went wrong")
+                    return
+                }
+                print("Saved user successfully into the Firebase DB")
+            })
         })
         print("Register Button was pressed.")
     }
