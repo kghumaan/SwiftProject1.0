@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
 
@@ -19,16 +20,24 @@ class LoginController: UIViewController {
         return view
     }()
     
-    let loginRegisterButton: UIButton = {
+    lazy var loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
         button.setTitle("Register", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        
         // this next step is needed or else the constraints set later on will not work
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    func handleRegister(){
+        FIRAuth.auth()?.createUser(withEmail: emailTextField.text, password: passwordTextField.text, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, Error?) -> Void#>)
+        print("Register Button was pressed.")
+    }
     
     let nameTextField: UITextField = {
         let tf = UITextField()
