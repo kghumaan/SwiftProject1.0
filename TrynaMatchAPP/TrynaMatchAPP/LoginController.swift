@@ -35,7 +35,19 @@ class LoginController: UIViewController {
     }()
     
     func handleRegister(){
-        FIRAuth.auth()?.createUser(withEmail: emailTextField.text, password: passwordTextField.text, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, Error?) -> Void#>)
+        guard let email = emailTextField.text, let password = passwordTextField.text else{
+            print("Form is not valid.")
+            return
+        }
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (currentUser, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            
+            // else... succesfully authernticated user
+        })
         print("Register Button was pressed.")
     }
     
