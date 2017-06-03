@@ -30,7 +30,7 @@ class ViewController: UITableViewController, FBSDKLoginButtonDelegate, GIDSignIn
     func handleLogout(){
         
         let loginController = LoginController()
-        self.present(loginController, animated: true, completion: nil)
+        present(loginController, animated: true, completion: nil)
     }
     
     fileprivate func setUpFacebookButton() {
@@ -79,8 +79,7 @@ class ViewController: UITableViewController, FBSDKLoginButtonDelegate, GIDSignIn
         
         FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
             if error != nil{
-                print("Something went wrong with our FB user: ", error ??
-                "")
+                print("Something went wrong with our FB user: ", error ?? "ERROR! #FBuser")
             }
             print("Succesfully logged in with our user:", user ?? "")
         })

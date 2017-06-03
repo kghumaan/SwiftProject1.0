@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrynaMatchAPP/ViewController.swift"
@@ -58,13 +58,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrynaMatchAPP/LoginController.swift"
-            timestampString = "518213880.839028"
+            timestampString = "518226289.148025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "handleRegisterClick()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrynaMatchAPP.LoginController.handleRegisterClick () -&gt; ()"
+                  moduleName = "TrynaMatchAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/KV/Desktop/SwiftProject1.0/TrynaMatchAPP/TrynaMatchAPP/LoginController.swift"
+                  timestampString = "518226514.955735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1599">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrynaMatchAPP.LoginController.(handleRegisterClick () -&gt; ()).(closure #1)"
+                  moduleName = "TrynaMatchAPP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/KV/Desktop/SwiftProject1.0/TrynaMatchAPP/TrynaMatchAPP/LoginController.swift"
+                  timestampString = "518226514.959803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1766">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
